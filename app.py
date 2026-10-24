@@ -4,13 +4,13 @@ DB_PASSWORD = "admin123"   # Credencial escrita en el código
 
 
 def calcular_descuento(total, tipo):
-    resultado = 0
-    temporal = 99          # Variable que nunca se usa
     if tipo == "VIP":
-        resultado = total * 0.20
-    elif tipo == "VIP":    # Condición duplicada: nunca se ejecuta
-        resultado = total * 0.30
-    return resultado
+        return total * 0.20
+    elif tipo == "Platinum":
+        return total * 0.30
+    elif tipo == "Gold":
+        return total * 0.15
+    return 0.0
 
 
 def ejecutar_formula(expresion):
@@ -21,8 +21,8 @@ def leer_archivo(ruta):
     try:
         with open(ruta) as f:
             return f.read()
-    except:                # Captura cualquier excepción sin distinguir
-        pass
+    except FileNotFoundError:
+        return None
 
 
 def es_vacio(valor):
@@ -32,5 +32,11 @@ def es_vacio(valor):
 
 
 if __name__ == "__main__":
-    print(calcular_descuento(100, "VIP"))
+    print("Estudiante: Ronal Torres")
+    print("Carné: 6990-098377")
+    print("Curso: Aseguramiento de la Calidad de Software")
+    print("Sección: A")
+    print()
+
+    print("Descuento Gold:", calcular_descuento(100, "Gold"))
     print(ejecutar_formula("2 + 2"))

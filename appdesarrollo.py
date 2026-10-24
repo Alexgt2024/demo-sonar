@@ -8,8 +8,6 @@ def calcular_descuento(total, tipo):
         return total * 0.20
     elif tipo == "Platinum":
         return total * 0.30
-    elif tipo == "Gold":
-        return total * 0.15
     return 0.0
 
 
@@ -32,11 +30,5 @@ def es_vacio(valor):
 
 
 if __name__ == "__main__":
-    print("Estudiante: Ronal Torres")
-    print("Carné: 6990-098377")
-    print("Curso: Aseguramiento de la Calidad de Software")
-    print("Sección: A")
-    print()
-
-    print("Descuento Gold:", calcular_descuento(100, "Gold"))
+    print(calcular_descuento(100, "VIP"))
     print(ejecutar_formula("2 + 2"))
