@@ -4,13 +4,13 @@ DB_PASSWORD = "admin123"   # Credencial escrita en el código
 
 
 def calcular_descuento(total, tipo):
-    if tipo == "VIP":
-        return total * 0.20
-    elif tipo == "Platinum":
-        return total * 0.30
-    return 0.0
     if total < 0:
         return 0.0
+    if tipo == "VIP":
+        return total * 0.20
+    if tipo == "Platinum":
+        return total * 0.30
+    return 0.0
 
 
 def ejecutar_formula(expresion):
