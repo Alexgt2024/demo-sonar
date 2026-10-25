@@ -10,7 +10,7 @@ def calcular_descuento(total, tipo):
         return total * 0.30
     return 0.0
     if total < 0:
-    return 0.0
+        return 0.0
 
 
 def ejecutar_formula(expresion):
