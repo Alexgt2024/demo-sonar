@@ -26,3 +26,6 @@ def test_leer_archivo_inexistente(tmp_path):
 def test_es_vacio():
     assert es_vacio(None) is True
     assert es_vacio("dato") is False
+
+def test_descuento_total_negativo():
+    assert calcular_descuento(-100, "VIP") == 0.0
